@@ -61,9 +61,8 @@ $Modules | ForEach-Object {
 }
 
 Write-Output "############### Updating Help for PowerShell Modules ###############"
-$Modules | ForEach-Object {
-    Update-Help -Force -Verbose -ErrorAction SilentlyContinue
-}
+
+Update-Help -Force -Verbose -ErrorAction SilentlyContinue
 
 $PackageFile = $PSScriptRoot + "\winget-packages.json"
 if (Test-Path $PackageFile) {
@@ -76,7 +75,7 @@ $SettingsFile = $PSScriptRoot + "\windows-terminal-settings.json"
 
 if ((Test-Path $SettingsFile) -and (Test-Path $WindowsTerminalSettingsFolder)) {
     Write-Output "############### Installing Windows Terminal Settings ###############"
-    Copy-Item -Path $SettingsFile -Destination "$($WindowsTerminalSettingsFolder)\setings.json" -Force -Verbose
+    Copy-Item -Path $SettingsFile -Destination "$($WindowsTerminalSettingsFolder)\settings.json" -Force -Verbose
 }
 
 

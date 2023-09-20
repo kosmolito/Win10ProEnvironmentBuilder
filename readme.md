@@ -23,28 +23,31 @@ This is a script that I use to install all the software I need after a fresh ins
 - PowerShell Execution Policy set to RemoteSigned
 
 ### Instructions
-1. Install Winget (App Installer) from the Microsoft Store
+1. Install Winget (App Installer) from the Microsoft Store, if
 2. Open PowerShell as Administrator
 3. Run the following command to set the Execution Policy to RemoteSigned
-    
-    Install git if you don't have it
-    ```powershell
-    winget install git
-    ```
-    Set the Execution Policy to RemoteSigned
+
     ```powershell
     Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
     ```
-    Clone this repo
+4. Install Git if you don't have it already via Winget
+
+    Install Git and PowerShell via Winget and open new PowerShell session in order to load git into the path
     ```powershell
-    git clone https://github.com/kosmolito/Win10ProEnvironmentBuilder.git
+    winget install git;PowerShell
     ```
-    Change directory to the repo
+5. Clone this repo
+
+    ```powershell
+    cd $env:USERPROFILE;git clone https://github.com/kosmolito/Win10ProEnvironmentBuilder.git
+    ```
+6. Change directory to the repo
+
     ```powershell
     cd .\Win10ProEnvironmentBuilder\
     ```
+7. Run the script
 
-    Run the script
     ```powershell
     .\Win10ProEnvironmentBuilder.ps1
     ```
