@@ -36,10 +36,13 @@ This is a script that I use to install all the software I need after a fresh ins
     ```
     ```powershell
     # Clone this repo
-    git clone
+    git clone https://github.com/kosmolito/Win10ProEnvironmentBuilder.git
     ```
     ```powershell
     # Change directory to the repo
-    cd .\Windows10-Post-Fresh-Installation-Script\
+    cd .\Win10ProEnvironmentBuilder\
     ```
-
+    ```powershell
+    # Run the script
+    .\Win10ProEnvironmentBuilder.ps1
+    ```
