@@ -13,6 +13,7 @@ This is a script that I use to install all the software I need after a fresh ins
     - Az
     - Microsoft.PowerShell.SecretManagement
     - ImportExcel
+- Start SSH-Agent Service and set it to automatic (Nice to have if you use SSH keys with Passphrase)
 - Install Winget Packages from json file in this repo
 - Enables Hyper-V
 
