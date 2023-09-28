@@ -43,7 +43,7 @@ $registryPath = "HKCU:\Control Panel\Colors"
 Set-ItemProperty -Path $registryPath -Name "Background" -Value $color
 
 Write-Output "################## Installing Powershell Modules ##################"
-$Modules = @("dbatools","HttpListener","PSWindowsUpdate","PnP.PowerShell","Az","ImportExcel", "Microsoft.PowerShell.SecretManagement")
+$Modules = @("dbatools","HttpListener","PSWindowsUpdate","PnP.PowerShell","Az","AWSPowerShell","ImportExcel", "Microsoft.PowerShell.SecretManagement")
 
 $Modules | ForEach-Object {
     $IsModuleInstalled = Get-InstalledModule -Name $_ -ErrorAction SilentlyContinue
