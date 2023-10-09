@@ -56,6 +56,7 @@ $Modules = @(
     "AWS.Tools.Installer",
     "AWS.Tools.EC2",
     "AWS.Tools.S3",
+    "AWS.Tools.ElasticLoadBalancingV2"
     "AWSCompleter"
     )
 
