@@ -7,6 +7,12 @@
 			"Packages" : 
 			[
 				{
+					"PackageIdentifier" : "DEVCOM.JetBrainsMonoNerdFont"
+				},
+				{
+					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
+				},
+				{
 					"PackageIdentifier" : "Amazon.AWSCLI"
 				},
 				{
@@ -100,7 +106,7 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "9NWMXB3MHTDB"
+					"PackageIdentifier" : "9P1J8S7CCWWT"
 				}
 			],
 			"SourceDetails" : 
