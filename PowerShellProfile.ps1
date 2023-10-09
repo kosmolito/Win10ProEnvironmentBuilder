@@ -35,6 +35,17 @@ function Invoke-ServerAction {
     }
 }
 
+$SSHConfig = "$env:USERPROFILE\.ssh\config"
+function Set-SSHConfig {
+    try {
+        notepad++ $SSHConfig -ErrorAction Stop
+    } 
+    catch {
+        notepad $SSHConfig
+    }
+	notepad++ $SSHConfig
+}
+
 function Start-WSLImageBackup {
     [CmdletBinding()]
     param(
