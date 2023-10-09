@@ -1,3 +1,5 @@
+oh-my-posh init pwsh --config "$($env:USERPROFILE)\AppData\Local\Programs\oh-my-posh\themes\gmay.omp.json" | Invoke-Expression
+
 # Useful function for managing Dell Servers with iDRAC
 # In this example, I have two servers named t320 and r730. the server names are stored in the ssh config file, which is defined in the $env:USERPROFILE\.ssh\config file.
 # Example of the config file:
