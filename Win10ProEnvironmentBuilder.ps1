@@ -93,6 +93,16 @@ if (Test-Path $PackageFile) {
     Write-Output "############### Installing Windows Packages ###############"
     winget import $PackageFile --no-upgrade --accept-package-agreements --accept-source-agreements --ignore-unavailable --disable-interactivity --verbose
 }
+
+Write-Output "################## Registering AWS CLI Completer ##################"
+try {
+    Import-Module -Name AWSCompleter -ErrorAction Stop
+    Register-AWSCompleter
+}
+catch {
+    Write-Output "AWSCompleter Module is not installed. Skipping AWSCompleter Registration."
+}
+
 }
 
 Write-Output "################## Configuration of Windows Terminal Settings ##################"
