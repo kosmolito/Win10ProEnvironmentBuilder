@@ -34,3 +34,24 @@ function Invoke-ServerAction {
         }
     }
 }
+
+function Start-WSLImageBackup {
+    [CmdletBinding()]
+    param(
+    [string]$Distro = "Debian",
+    [string]$BackupDestinationPath = "D:\wsl_backups"
+    )
+
+    if ((Test-Path $BackupDestinationPath) -eq $false) {
+        Write-Verbose "Creating backup destination folder [$($BackupDestinationPath)].."
+        New-Item -Path $BackupDestinationPath -ItemType Directory -Force | Out-Null
+    }
+
+    $DateTime = get-date -Format "yyyy-MM-dd-hhmm"
+    $BackupFile = "$($BackupDestinationPath)\$($Distro)-$($DateTime).tar"
+    Write-Verbose "Shutting down the WSL before Backup.."
+    wsl --shutdown
+    Start-Sleep -Seconds 5
+    Write-Verbose "Making WSL image backup for [$($Distro)] to [$($BackupFile)].."
+    wsl --export $Distro $BackupFile
+}
