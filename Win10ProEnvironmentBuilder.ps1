@@ -91,7 +91,8 @@ Write-Output "################## Installing Applications by Winget #############
 $PackageFile = $PSScriptRoot + "\winget-packages.json"
 if (Test-Path $PackageFile) {
     Write-Output "############### Installing Windows Packages ###############"
-    winget import $PackageFile --no-upgrade --accept-package-agreements --accept-source-agreements --ignore-unavailable --verbose
+    winget import $PackageFile --no-upgrade --accept-package-agreements --accept-source-agreements --ignore-unavailable --disable-interactivity --verbose
+}
 }
 
 Write-Output "################## Configuration of Windows Terminal Settings ##################"
