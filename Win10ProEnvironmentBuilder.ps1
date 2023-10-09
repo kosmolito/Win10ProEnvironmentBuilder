@@ -142,6 +142,14 @@ function Install-ApplicationsByWinget {
     catch {
         Write-Output "AWSCompleter Module is not installed. Skipping AWSCompleter Registration."
     }
+
+    $gmayOhMyPoshTheme = $PSScriptRoot + "\gmay.omp.json"
+    try {
+        Copy-Item $gmayOhMyPoshTheme -Destination "$($env:USERPROFILE)\AppData\Local\Programs\oh-my-posh\themes\gmay.omp.json" -Force -Verbose -ErrorAction Stop
+    }
+    catch {
+        Write-Output "oh-my-posh is not installed. Skipping oh-my-posh theme installation."
+    }
 }
 
 
