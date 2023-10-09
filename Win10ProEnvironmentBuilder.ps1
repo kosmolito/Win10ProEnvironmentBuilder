@@ -103,6 +103,19 @@ catch {
     Write-Output "AWSCompleter Module is not installed. Skipping AWSCompleter Registration."
 }
 
+Write-Output "################## PowerShell Profile ##################"
+
+$ProfilePath = $env:USERPROFILE + "\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+$RepoProfilePath = $PSScriptRoot + "\PowerShellProfile.ps1"
+
+if (!(Test-Path $ProfilePath)) {
+    try {
+        Write-Output "############### Copying PowerShell Profile From Repository ###############"
+        Copy-Item -Path $RepoProfilePath -Destination $ProfilePath -Force -Verbose -ErrorAction Stop
+    }
+    catch {
+        Write-Output $_.Exception.Message
+    }
 }
 
 Write-Output "################## Configuration of Windows Terminal Settings ##################"
