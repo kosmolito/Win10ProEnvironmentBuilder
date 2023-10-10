@@ -37,7 +37,8 @@
             "properties": {
               "style": "full"
             },
-            "style": "powerline",
+            "style": "diamond",
+            "trailing_diamond": "\ue0b4",
             "template": " \ue5ff {{ .Path }} ",
             "type": "path"
           },
