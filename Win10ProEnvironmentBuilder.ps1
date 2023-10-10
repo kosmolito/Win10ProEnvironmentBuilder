@@ -143,13 +143,6 @@ function Install-ApplicationsByWinget {
         Write-Output "AWSCompleter Module is not installed. Skipping AWSCompleter Registration."
     }
 
-    $gmayOhMyPoshTheme = $PSScriptRoot + "\gmay.omp.json"
-    try {
-        Copy-Item $gmayOhMyPoshTheme -Destination "$($env:USERPROFILE)\AppData\Local\Programs\oh-my-posh\themes\gmay.omp.json" -Force -Verbose -ErrorAction Stop
-    }
-    catch {
-        Write-Output "oh-my-posh is not installed. Skipping oh-my-posh theme installation."
-    }
 }
 
 
@@ -179,6 +172,14 @@ function Set-WindowsTerminalSettings {
     if ((Test-Path $SettingsFile) -and (Test-Path $WindowsTerminalSettingsFolder)) {
         Write-Output "############### Installing Windows Terminal Settings ###############"
         Copy-Item -Path $SettingsFile -Destination "$($WindowsTerminalSettingsFolder)\settings.json" -Force -Verbose
+    }
+
+    $gmayOhMyPoshTheme = $PSScriptRoot + "\gmay.omp.json"
+    try {
+        Copy-Item $gmayOhMyPoshTheme -Destination "$($env:USERPROFILE)\AppData\Local\Programs\oh-my-posh\themes\gmay.omp.json" -Force -Verbose -ErrorAction Stop
+    }
+    catch {
+        Write-Output "oh-my-posh is not installed. Skipping oh-my-posh theme installation."
     }
 }
 
