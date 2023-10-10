@@ -86,7 +86,8 @@ function Install-PowerShellModules {
         "AWS.Tools.Installer",
         "AWS.Tools.EC2",
         "AWS.Tools.S3",
-        "AWS.Tools.ElasticLoadBalancingV2"
+        "AWS.Tools.ElasticLoadBalancingV2",
+        "AWS.Tools.CloudFormation",
         "AWSCompleter"
         )
 
