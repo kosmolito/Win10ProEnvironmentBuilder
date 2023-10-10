@@ -76,6 +76,9 @@
 					"PackageIdentifier" : "Microsoft.PowerShell"
 				},
 				{
+					"PackageIdentifier" : "Python.Python.3.12"
+				},
+				{
 					"PackageIdentifier" : "VideoLAN.VLC"
 				},
 				{
