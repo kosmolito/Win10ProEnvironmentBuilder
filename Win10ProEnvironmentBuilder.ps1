@@ -144,6 +144,19 @@ function Install-ApplicationsByWinget {
         Write-Output "AWSCompleter Module is not installed. Skipping AWSCompleter Registration."
     }
 
+    try {
+        cfn-lint --version
+    }
+    catch {
+        try {
+            Write-Output "################## Installing cfn-lint ##################"
+            pip install cfn-lint -ErrorAction Stop
+        }
+        catch {
+            Write-Output "cfn-lint installation error. Skipping cfn-lint installation."
+        }
+    }
+
 }
 
 
