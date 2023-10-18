@@ -150,7 +150,7 @@ function Install-ApplicationsByWinget {
     catch {
         try {
             Write-Output "################## Installing cfn-lint ##################"
-            pip install cfn-lint -ErrorAction Stop
+            pip install cfn-lint
         }
         catch {
             Write-Output "cfn-lint installation error. Skipping cfn-lint installation."
