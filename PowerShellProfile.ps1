@@ -85,3 +85,13 @@ function Start-WSLImageBackup {
     Write-Verbose "Making WSL image backup for [$($Distro)] to [$($BackupFile)].."
     wsl --export $Distro $BackupFile
 }
+
+function Restart-WSL {
+    taskkill /f /im wslservice.exe
+    taskkill /f /im wslhost.exe
+    taskkill /f /im wsl.exe
+    wsl --shutdown
+    Get-Service LxssManager | Restart-Service
+}
+
+
