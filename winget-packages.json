@@ -7,13 +7,50 @@
 			"Packages" : 
 			[
 				{
-					"PackageIdentifier" : "DEVCOM.JetBrainsMonoNerdFont"
+					"PackageIdentifier" : "k3d.k3d"
 				},
-				{
-					"PackageIdentifier" : "JanDeDobbeleer.OhMyPosh"
-				},
+				
 				{
 					"PackageIdentifier" : "Amazon.AWSCLI"
+				},
+				{
+					"PackageIdentifier" : "JernejSimoncic.Wget"
+				},
+				{
+					"PackageIdentifier" : "Kubernetes.kompose"
+				},
+				{
+					"PackageIdentifier" : "argoproj.argocd"
+				},
+				{
+					"PackageIdentifier" : "RedHat.Podman"
+				},
+				{
+					"PackageIdentifier" : "RedHat.Podman-Desktop"
+				},
+				{
+					"PackageIdentifier" : "OpenJS.NodeJS"
+				},
+				{
+					"PackageIdentifier" : "jqlang.jq"
+				},
+				{
+					"PackageIdentifier" : "RedHat.OpenShift-Client"
+				},
+				{
+					"PackageIdentifier" : "suse.RancherDesktop"
+				},
+				{
+					"PackageIdentifier" : "Obsidian.Obsidian"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerDesktop"
+				},
+				{
+					"PackageIdentifier" : "Docker.DockerCLI"
+				},
+				{
+					"PackageIdentifier" : "Hugo.Hugo.Extended"
 				},
 				{
 					"PackageIdentifier" : "Bitwarden.Bitwarden"
