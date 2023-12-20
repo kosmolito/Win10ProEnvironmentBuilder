@@ -1,14 +1,31 @@
-oh-my-posh init pwsh --config "$($env:USERPROFILE)\AppData\Local\Programs\oh-my-posh\themes\gmay.omp.json" | Invoke-Expression
+Function Convert-ToBase64 {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$String
+    )
+    process {
+        [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes($String))
+    }
+}
 
-# Useful function for managing Dell Servers with iDRAC
-# In this example, I have two servers named t320 and r730. the server names are stored in the ssh config file, which is defined in the $env:USERPROFILE\.ssh\config file.
-# Example of the config file:
-# Host t320
-#     HostName 192.168.10.10
-#     User root
-#     IdentityFile ~/.ssh/id_rsa
-#     Port 22
+Function Convert-FromBase64 {
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        [string]$String
+    )
+    process {
+        [System.Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($String))
+    }
+}
 
+
+$SSHConfig = "$env:USERPROFILE\.ssh\config"
+
+function Set-SSHConfig {
+	notepad++ $SSHConfig
+}
 
 function Invoke-ServerAction {
     # Add parameter names Action with options of PowerOn, PowerOff, Status
