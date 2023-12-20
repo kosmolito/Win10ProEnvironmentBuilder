@@ -77,7 +77,7 @@ function Start-WSLImageBackup {
         New-Item -Path $BackupDestinationPath -ItemType Directory -Force | Out-Null
     }
 
-    $DateTime = get-date -Format "yyyy-MM-dd-hhmm"
+    $DateTime = get-date -Format "yyyy-MM-dd-HHmm"
     $BackupFile = "$($BackupDestinationPath)\$($Distro)-$($DateTime).tar"
     Write-Verbose "Shutting down the WSL before Backup.."
     wsl --shutdown
