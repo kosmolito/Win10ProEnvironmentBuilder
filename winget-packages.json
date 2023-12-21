@@ -50,6 +50,9 @@
 					"PackageIdentifier" : "Docker.DockerCLI"
 				},
 				{
+					"PackageIdentifier" : "Kubernetes.kustomize"
+				},
+				{
 					"PackageIdentifier" : "Hugo.Hugo.Extended"
 				},
 				{
