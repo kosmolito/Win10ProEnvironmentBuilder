@@ -148,13 +148,6 @@
     ],
     "profiles": 
     {
-        "defaults": 
-        {
-            "font": 
-            {
-                "face": "JetBrainsMonoNL Nerd Font"
-            }
-        },
         "list": 
         [
             {
