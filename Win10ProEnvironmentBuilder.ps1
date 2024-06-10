@@ -164,8 +164,8 @@ function Install-ApplicationsByWinget {
 function Set-PowerShellProfile {
     Write-Output "################## PowerShell Profile ##################"
 
-    $ProfilePathFolder = $env:USERPROFILE + "\Documents\WindowsPowerShell"
-    $ProfilePath = $env:USERPROFILE + "\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+    $ProfilePathFolder = $env:USERPROFILE + "\Documents\PowerShell"
+    $ProfilePath = $ProfilePathFolder + "\Microsoft.PowerShell_profile.ps1"
     $RepoProfilePath = $PSScriptRoot + "\PowerShellProfile.ps1"
 
     if (!(Test-Path $ProfilePathFolder)) {
